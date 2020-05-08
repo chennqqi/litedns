@@ -1,0 +1,19 @@
+log_file: "console"
+log_level: "WARN"
+forwards:
+  - name: .
+    expire: 60s
+    upstreams:
+    - 'udp://114.114.114.114:53'
+addr: ":10053"
+expire: 60s
+redis:
+  enable: true
+  addrs: [ "192.168.56.17:6379" ]
+  master: ""
+  password: ""
+web:
+  enable: true
+  addr: ":8080"
+  token: ""
+  readonly: false
