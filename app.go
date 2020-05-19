@@ -51,7 +51,7 @@ func (t Resolve) ToA() []dns.RR {
 
 func (t Resolve) ToAAAA() []dns.RR {
 	var rr []dns.RR
-	for i := 0; i < len(t.A); i++ {
+	for i := 0; i < len(t.AAAA); i++ {
 		a := new(dns.AAAA)
 		a.AAAA = net.ParseIP(t.AAAA[i])
 		a.Hdr.Class = dns.ClassINET
